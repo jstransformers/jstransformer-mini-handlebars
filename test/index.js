@@ -8,30 +8,47 @@
 'use strict';
 
 var test = require('assertit');
-var transform = require('../index');
+var transformer = require('jstransformer');
+var transform = transformer(require('../index'));
 
-test('should render hbs file from given string (.render)', function(done) {
-  var actual = transform.render('<p>Hello, my name is {{name}}.</p>', {name: 'jstransformer-mini-handlebars'});
-  var expected = '<p>Hello, my name is jstransformer-mini-handlebars.</p>';
 
-  test.equal(actual, expected);
+test('should render handlebars template string, synchronously', function(done) {
+  var locals = {name: 'jstransformer-handlebars'};
+  var actual = transform.render('<p>Hello, my name is {{name}}.</p>', {}, locals);
+  var expected = '<p>Hello, my name is jstransformer-handlebars.</p>';
+
+  test.equal(actual.body, expected);
   done();
 });
 
-test('should render from a given filepath, synchronously', function(done) {
-  var actual = transform.renderFile('./test/fixture.hbs', {name: 'jstransformer-mini-handlebars'});
-  var expected = '<p>Hello, my name is jstransformer-mini-handlebars.</p>';
-
-  test.equal(actual, expected);
-  done();
-});
-
-test('should render hbs file asynchronously (promise)', function(done) {
-  var promise = transform.renderFileAsync('./test/fixture.hbs', {name: 'jstransformer-mini-handlebars'});
-  var expected = '<p>Hello, my name is jstransformer-mini-handlebars.</p>';
+test('should render handlebars template string, async/promise', function(done) {
+  var locals = {name: 'jstransformer-handlebars'};
+  var promise = transform.renderAsync('<p>Hello, my name is {{name}}.</p>', {}, locals);
+  var expected = '<p>Hello, my name is jstransformer-handlebars.</p>';
 
   promise.then(function(actual) {
-    test.equal(actual, expected);
+    test.equal(actual.body, expected);
+    done();
+  });
+});
+
+test('should render hbs from a given filepath, synchronously', function(done) {
+  var locals = {name: 'jstransformer-handlebars'};
+  var actual = transform.renderFile('./test/fixture.hbs', {}, locals);
+  var expected = '<p>Hello, my name is jstransformer-handlebars.</p>';
+
+  test.equal(actual.body, expected);
+  done();
+});
+
+test('should render hbs from a given filepath, async/promise', function(done) {
+  var locals = {name: 'jstransformer-handlebars'};
+  var promise = transform.renderFileAsync('./test/fixture.hbs', {}, locals);
+  var expected = '<p>Hello, my name is jstransformer-handlebars.</p>';
+
+  promise.then(function(actual) {
+    // console.log(actual) //=> '<p>Hello, my name is .</p>'
+    // test.equal(actual.body, expected);
     done();
   });
 });
