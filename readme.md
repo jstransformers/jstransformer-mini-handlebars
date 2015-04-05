@@ -17,6 +17,16 @@ var hbs = require('jstransformer')(require('jstransformer-mini-handlebars'));
 ```
 
 
+## Related
+- [myth](https://github.com/segmentio/myth): A CSS preprocessor that acts like a polyfill for future versions of the spec.
+- [styl](https://github.com/tj/styl): CSS pre-processor built on Rework
+- [jstransformer](https://github.com/jstransformers/jstransformer): Normalize the API of any jstransformer
+- [jstransformer-myth](https://github.com/jstransformers/jstransformer-myth): Myth support for JS Transformers
+- [jstransformer-handlebars](https://github.com/jstransformers/jstransformer-handlebars): Transform handlebars template into HTML.
+- [jstransformer-toml](https://github.com/jstransformers/jstransformer-toml): TOML (minimal configuration file format) support for JS Transformers
+- [assertit](https://github.com/tunnckoCore/assertit): Thin sugar layer on top of `testit` framework, `is-kindof` and `assert`.
+
+
 ## License [![MIT license][license-img]][license-url]
 Copyright (c) 2015 [JSTransformers][jstransformers-url], [contributors][contrib-graf].  
 Released under the [`MIT`][license-url] license.
