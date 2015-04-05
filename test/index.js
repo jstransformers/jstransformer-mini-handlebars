@@ -35,4 +35,3 @@ test('should render hbs file asynchronously (promise)', function(done) {
     done();
   });
 });
-

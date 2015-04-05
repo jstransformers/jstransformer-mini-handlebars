@@ -18,21 +18,17 @@ var hbs = new MiniHandlebars();
 exports.name = 'mini-handlebars';
 exports.outputFormat = 'html';
 
-exports.render = function _render(str, locals, opts) {
-  opts = opts || {};
-  for (var template in opts.templates) {
-    hbs.templates[template] = opts.templates[template];
-  }
+exports.render = function _render(str, locals) {
   return hbs.render(str, locals);
 };
-exports.renderFile = function _renderFile(filepath, locals, opts) {
+exports.renderFile = function _renderFile(filepath, locals) {
   var str = readFileSync(filepath, 'utf8');
-  return exports.render(str, locals, opts);
+  return exports.render(str, locals);
 };
-exports.renderFileAsync = function _renderFileAsync(filepath, locals, opts) {
+exports.renderFileAsync = function _renderFileAsync(filepath, locals) {
   var promise = readFile(filepath, 'utf8');
 
   return promise.then(function(str) {
-    return exports.render(str, locals, opts);
+    return exports.render(str, locals);
   })
 };
