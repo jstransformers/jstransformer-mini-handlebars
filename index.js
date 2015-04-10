@@ -13,6 +13,7 @@ var MiniHandlebars = require('mini-handlebars');
 var hbs = new MiniHandlebars();
 
 exports.name = 'mini-handlebars';
+exports.inputFormats = ['hbs', 'mhbs', 'handlebars'];
 exports.outputFormat = 'html';
 
 exports.render = function _render(str, options, locals) {
