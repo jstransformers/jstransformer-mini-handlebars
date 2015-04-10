@@ -1,5 +1,9 @@
 
 
+## v0.4.2 / April 10, 2015
+- publish v0.4.2
+- fix license link
+
 ## v0.4.1 / April 10, 2015
 - publish v0.4.1
 - run update, normalize boilerplate
