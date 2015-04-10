@@ -1,5 +1,8 @@
 
 
+## v0.4.3 / April 10, 2015
+- add `inputFormats`
+
 ## v0.4.2 / April 10, 2015
 - publish v0.4.2
 - fix license link
