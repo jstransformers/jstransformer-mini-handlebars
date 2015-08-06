@@ -1,7 +1,8 @@
 # Changelog
 
-## v1.0.0: 2015-08-04
-
+## v0.5.0: 2015-08-07
+- fix readme example
+- use extend-shallow
 - Updated Boilerplate
 
 ## v0.4.3 / April 10, 2015

@@ -4,7 +4,7 @@
     "mini-handlebars": "~0.1.0"
   },
   "name": "jstransformer-mini-handlebars",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "description": "MiniHandlebars support for JSTransformers.",
   "keywords": [
     "jstransformer"
