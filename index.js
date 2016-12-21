@@ -1,16 +1,15 @@
-'use strict';
+'use strict'
 
-var fs = require('fs');
-var path = require('path');
-var MiniHandlebars = require('mini-handlebars');
-var hbs = new MiniHandlebars();
-var extend = require('extend-shallow');
+var MiniHandlebars = require('mini-handlebars')
+var extend = require('extend-shallow')
 
-exports.name = 'mini-handlebars';
-exports.inputFormats = ['hbs', 'mhbs', 'handlebars'];
-exports.outputFormat = 'html';
+var hbs = new MiniHandlebars()
 
-exports.render = function _render(str, options, locals) {
-  var data = extend({}, options, locals);
-  return hbs.render(str, data);
-};
+exports.name = 'mini-handlebars'
+exports.inputFormats = ['hbs', 'mhbs', 'handlebars']
+exports.outputFormat = 'html'
+
+exports.render = function (str, options, locals) {
+  var data = extend({}, options, locals)
+  return hbs.render(str, data)
+}
