@@ -1,5 +1,7 @@
 # jstransformer-mini-handlebars
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jstransformers/jstransformer-mini-handlebars.svg)](https://greenkeeper.io/)
+
 [MiniHandlebars](https://github.com/mikesmullin/mini-handlebars) support for [JSTransformers](http://github.com/jstransformers).
 
 [![Build Status](https://img.shields.io/travis/jstransformers/jstransformer-mini-handlebars/master.svg)](https://travis-ci.org/jstransformers/jstransformer-mini-handlebars)
