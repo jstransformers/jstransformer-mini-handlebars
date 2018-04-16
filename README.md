@@ -15,7 +15,7 @@
 ## API
 
 ```js
-var miniHandlebars = require('jstransformer')(require('jstransformer-mini-handlebars'));
+var miniHandlebars = require('jstransformer')(require('jstransformer-mini-handlebars'))
 
 miniHandlebars.render('Hello, {{name}}!', {name: 'World'}).body
 //=> 'Hello, World!'
